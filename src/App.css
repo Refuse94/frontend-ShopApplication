@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #304b2e;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +35,26 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.formular {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 30px;
+}
+
+.formular input {
+  padding: 10px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.formular select {
+  font-size: 20px;
+}
+
+.formular button {
+  padding: 10px;
+  background: red;
+  color: #fff;
+  font-size: 20px;
 }
