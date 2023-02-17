@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { data_products } from "../data/productData.json";
 
 export const NewBlog: React.FC<{}> = () => {
   const [productName, setProductName] = useState<string>("");
@@ -27,6 +26,14 @@ export const NewBlog: React.FC<{}> = () => {
     const formData = { productName, productPrice, productCompany };
     console.log(formData);
     const formDataJSON = JSON.stringify(formData);
+
+    fetch("http://localhost:8000/data_products", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: formDataJSON,
+    }).then(async (res) => {
+      console.log("new Blogg was Added");
+    });
   };
   return (
     <div className="formular">
