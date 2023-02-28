@@ -21,28 +21,30 @@ export const NewProduct: React.FC<{}> = () => {
   };
   return (
     <div className="formular">
-      <h2>Vstupný formulár</h2>
+      <h2>Entry form</h2>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="">Zadaj názov produktu:</label> <br />
+        <label htmlFor="">Enter the name of the product:</label> <br />
         <input
           type="text"
           required
           value={productName}
           onChange={(e) => setProductName(e.target.value)}
+          style={{ borderRadius: "20px" }}
         />
         <br />
         <br />
-        <label htmlFor="">Zadaj cenu produktu:</label> <br />
+        <label htmlFor="">Enter the price of the product:</label> <br />
         <input
           type="text"
           required
           value={productPrice}
           onChange={(e) => setProductPrice(e.target.value)}
+          style={{ borderRadius: "20px" }}
         />
         <br />
         <br />
         <br />
-        <label htmlFor="">Zadaj obchodný reťazec</label> <br />
+        <label htmlFor="">Enter the name of chain store</label> <br />
         <select
           name=""
           id=""
@@ -59,7 +61,7 @@ export const NewProduct: React.FC<{}> = () => {
         <br />
         <br />
         <br />
-        <button>Pridaj nový produkt</button> <br />
+        <button>Add new product</button> <br />
         <br /> <br />
         {productName} <br />
         {productPrice} <br />

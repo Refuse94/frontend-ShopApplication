@@ -1,9 +1,10 @@
 import "./App.css";
-import { Default } from "./components/default";
+import { NavBar } from "./components/navBar";
 import { NewProduct } from "./components/form";
-import "./App.css";
+import { Filter } from "./components/filter";
+import { BestSales } from "./components/bestSales";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { useFetch } from "./functions/useFetch";
+/* import { useFetch } from "./functions/useFetch"; */
 
 export const App: React.FC = () => {
   /*const {
@@ -23,13 +24,24 @@ export const App: React.FC = () => {
     <div className="App">
       <header className="App-header">
         <Router>
-          <Default></Default>
+          <NavBar></NavBar>
           <Switch>
-            <Route exact path="/">
+            <Route exact path="/"></Route>
+            <Route path="/newProduct">
               <NewProduct></NewProduct>
             </Route>
-            <Route path="/create"></Route>
-            <Route path="/blogs/:id"></Route>
+            <Route path="/filter">
+              <br />
+              <br />
+              <br />
+              <Filter></Filter>
+            </Route>
+            <Route path="/bestSales">
+              <br />
+              <br />
+              <br />
+              <BestSales></BestSales>
+            </Route>
           </Switch>
         </Router>
       </header>
