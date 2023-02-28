@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export const NewProduct: React.FC<{}> = () => {
   const [productName, setProductName] = useState<string>("");
-  const [productPrice, setProductPrice] = useState<number | any>();
+  const [productPrice, setProductPrice] = useState<number | undefined>();
   const [productCompany, setProductCompany] = useState<string>("Tesco");
 
   const handleSubmit = (e: any) => {
@@ -38,7 +38,7 @@ export const NewProduct: React.FC<{}> = () => {
           type="text"
           required
           value={productPrice}
-          onChange={(e) => setProductPrice(e.target.value)}
+          onChange={(e) => setProductPrice(parseInt(e.target.value))}
           style={{ borderRadius: "20px" }}
         />
         <br />
