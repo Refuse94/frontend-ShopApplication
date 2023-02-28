@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const NewBlog: React.FC<{}> = () => {
+export const NewProduct: React.FC<{}> = () => {
   const [productName, setProductName] = useState<string>("");
   const [productPrice, setProductPrice] = useState<string>("");
   const [productCompany, setProductCompany] = useState<string>("Tesco");
