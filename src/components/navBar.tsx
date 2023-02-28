@@ -67,5 +67,3 @@ export const NavBar: React.FC<{}> = () => {
     </div>
   );
 };
-
-// npx json-server --watch src/data/productData.json --port 8000

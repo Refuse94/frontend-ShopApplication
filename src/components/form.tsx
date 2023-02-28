@@ -11,7 +11,7 @@ export const NewProduct: React.FC<{}> = () => {
     console.log(formData);
     const formDataJSON = JSON.stringify(formData);
 
-    fetch("http://localhost:8000/data_products", {
+    fetch("http://localhost:5000/products", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: formDataJSON,
