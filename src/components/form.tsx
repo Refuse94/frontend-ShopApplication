@@ -5,22 +5,6 @@ export const NewBlog: React.FC<{}> = () => {
   const [productPrice, setProductPrice] = useState<string>("");
   const [productCompany, setProductCompany] = useState<string>("Tesco");
 
-  /* const handleSubmit = (e: any) => {
-    e.preventDefault();
-    const formData = { title, body, author };
-    setIsPending(true);
-
-    fetch("http://localhost:8000/data_blogs", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    }).then(async (res) => {
-      console.log("new Blogg was Added");
-      setIsPending(false);
-      history.push("/");
-    });
-    */
-
   const handleSubmit = (e: any) => {
     e.preventDefault();
     const formData = { productName, productPrice, productCompany };
@@ -46,7 +30,6 @@ export const NewBlog: React.FC<{}> = () => {
           value={productName}
           onChange={(e) => setProductName(e.target.value)}
         />
-        <br />
         <br />
         <br />
         <label htmlFor="">Zadaj cenu produktu:</label> <br />
