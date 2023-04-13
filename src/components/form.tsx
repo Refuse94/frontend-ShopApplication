@@ -10,6 +10,7 @@ export const NewProduct: React.FC<{}> = () => {
     const formData = { productName, productPrice, productCompany };
     console.log(formData);
     const formDataJSON = JSON.stringify(formData);
+    alert("Nový produkt bol pridaný do Databazi! ");
 
     fetch("http://localhost:5000/products", {
       method: "POST",

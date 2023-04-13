@@ -4,7 +4,7 @@ export const NavBar: React.FC<{}> = () => {
   return (
     <div>
       Welcome on our application{" "}
-      <span style={{ color: "orange" }}>IGITO MAPASI</span>
+      <span style={{ color: "orange" }}>IGTITO MAPASI</span>
       <br />
       <br />
       <br />
